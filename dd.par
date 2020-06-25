@@ -1,0 +1,37 @@
+#
+# nek parameter file
+#
+[GENERAL] 
+numSteps = 1500000
+dt = 0.014
+variableDT = yes
+targetCFL = 0.0104
+writeInterval = 500
+
+[PROBLEMTYPE]
+equation = incompNS
+variableProperties = no
+
+[PRESSURE]
+residualTol = 1e-06
+residualProj = no
+
+[VELOCITY]
+residualTol = 1e-08
+density = 1
+viscosity = 6.25
+
+[TEMPERATURE] # temperature with Hmholtz 
+conjugateHeatTransfer = no 
+rhoCp = 1.0
+conductivity = 1.0
+residualTol = 1e-08
+residualProj = yes
+
+[SCALAR01] # temperature with CVODE
+conjugateHeatTransfer = no 
+#solver = cvode
+residualTol = 1e-8
+diffusivity = 0.33
+density = 1.0
+ 
