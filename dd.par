@@ -21,16 +21,15 @@ residualTol = 1e-08
 density = 1
 viscosity = 6.25
 
-[TEMPERATURE] # temperature with Hmholtz 
+[TEMPERATURE]
 conjugateHeatTransfer = no 
 rhoCp = 1.0
 conductivity = 1.0
 residualTol = 1e-08
 residualProj = yes
 
-[SCALAR01] # temperature with CVODE
+[SCALAR01]
 conjugateHeatTransfer = no 
-#solver = cvode
 residualTol = 1e-8
 diffusivity = 0.33
 density = 1.0
