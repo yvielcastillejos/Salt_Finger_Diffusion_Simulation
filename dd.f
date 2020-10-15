@@ -63,17 +63,42 @@ c     if (ieg.gt.nelgv) qvol = 1.0
       if (ifield.eq.2) then
 	qvol = -uy
       elseif (ifield.eq.3) then
-	qvol = -uy/1.8
-      elseif (ifield.eq.4) then
-        qvol = 0.0
+	qvol = -uy/1.1
       endif
 
       return
       end
 c-----------------------------------------------------------------------
-      subroutine userchk
+      subroutine userchk()
       include 'SIZE'
       include 'TOTAL'
+      include 'RESTART'
+
+      character*80 filename(9999)
+      parameter (lt=lx1*ly1*lz1*lelt)
+      common /defvar/ wT1(lt)
+      ifreguo = .false.
+      if (nsteps.eq.0) then
+	if (nid.eq.0) then
+		open(unit=199,file='filename.list',form='formatted',status='old')
+		read(199,*) nfiles
+		read(199,'(A80)')(filename(i),i=1,nfiles)
+		close(199)
+	endif
+	call bcast(nfiles,isize)
+	call bcast(filename,nfiles*80)
+	open(1, file = 'WT.dat', status = 'unknown')
+	write(1,'(4a12)') 'time','wTav'
+	do i=1,nfiles
+		call load_fld(filename(i))
+		call col3(wT1,vy,t(1,1,1,1,1),lt)
+		wTav = glsc2(wT1,bm1,lt)/voltm1
+c		wTav = glsc2(wT1,bm1,lt)/voltm1
+c Write this computed flux at each time step to .dat file
+		write(1,*) time, wTav
+	enddo
+	close(1)
+      endif
 
       return
       end
@@ -111,11 +136,6 @@ C     Set initial conditions
       eps = 1e-4
       beta = 13.*2.*pi/500.
       alpha = 23.*2.*pi/300.
-      a = 1.0
-      b = 1.0
-      val_1 = 0.0
-      val_2 = 0.0
-      ymax = 500.0
 
 c      temp = -0.001*z
       if (ifield.eq.2) then
@@ -124,20 +144,6 @@ c         temp=-0.0002*y
       elseif (ifield.eq.3) then
 c         temp = -(0.0002/3.)*y
           temp = eps*sin(alpha*x)*cos(beta*y)
-      elseif (ifield.eq.4) then
-	  if (y>=0 .AND. y<=80) then
- 	  	val_1 = (sin(y*pi/500.))**1.2
-          	val_2 = val_1/1.5
-          	temp = a*val_2 + b
-  	  elseif (y>80 .AND. y<420) then
-                val_1 = (sin(y*pi/500.))**0.2
-                val_2 = val_1/2.9
-                temp = a*val_2 + b
-          elseif (y>=420 .AND. y<=500) then
-                val_1 = (sin(y*pi/500.))**1.2
-                val_2 = val_1/1.5
-                temp = a*val_2 + b
-	  endif
       endif
 
 c      if (ifield.eq.2) then
@@ -188,3 +194,24 @@ c-----------------------------------------------------------------------
       return
       end
 c-----------------------------------------------------------------------
+
+c automatically added by makenek
+      subroutine usrdat0() 
+
+      return
+      end
+
+c automatically added by makenek
+      subroutine usrsetvert(glo_num,nel,nx,ny,nz) ! to modify glo_num
+      integer*8 glo_num(1)
+
+      return
+      end
+
+c automatically added by makenek
+      subroutine userqtl
+
+      call userqtl_scig
+
+      return
+      end
