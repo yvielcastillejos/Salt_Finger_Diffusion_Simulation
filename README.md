@@ -15,3 +15,4 @@ See Results at: https://docs.google.com/presentation/d/1XVgVNwTVRHH1cFl-tbmP9pR_
   - https://github.com/yvielcastillejos/pymech Pymech
 2. VisIt: 
   - https://wci.llnl.gov/simulation/computer-codes/visit/ Website
+3. Research Papers (TBA)
