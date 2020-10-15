@@ -10,7 +10,7 @@ The simulations were conducted by inputting the Non-dimensionalized Boussinesq E
 
 Some results:
  - For The salt-finger simulations, we can look at different times to see how the layer formation takes place:
-<img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Salt.png" width = "350" height = "250">
+<img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Salt.png" width = "550" height = "350">
 
  - For the salt finger simulation above, we study the nusselt number and look at the average of the flux (also correlated to energy) and see what transpires at the different regimes.
  <img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Nu.png"  width = "250" height = "250">
