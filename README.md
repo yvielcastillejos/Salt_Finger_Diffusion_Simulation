@@ -10,7 +10,8 @@ See Results at: https://docs.google.com/presentation/d/1XVgVNwTVRHH1cFl-tbmP9pR_
 
 # Acknowlegdement
 1. Nek5000:
-  https://github.com/Nek5000/Nek5000 Github
-  https://nek5000.mcs.anl.gov/ Official Site
+  - https://github.com/Nek5000/Nek5000 Github
+  - https://nek5000.mcs.anl.gov/ Official Site
+  - https://github.com/yvielcastillejos/pymech Pymech
 2. VisIt: 
-  https://wci.llnl.gov/simulation/computer-codes/visit/ Website
+  - https://wci.llnl.gov/simulation/computer-codes/visit/ Website
