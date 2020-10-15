@@ -6,7 +6,7 @@ What is included is the basic code structure for the simulation of Salt fingers 
 The simulations were conducted by inputting the Non-dimensionalized Boussinesq Equations (Navier Stokes Equations) into the Nek5000 Solver along with the linear equation of state between temperature and salinity. In my simulations, I investigated the effect of the density ratio in salt fingers and oscillative diffusion in the ocean. Furthermore, by changing such parameters, I also looked at how oxygen is distrubuted in the model especially as staircases of temperature and salinity start forming.
 
 # Results
-## See Full Results at: https://docs.google.com/presentation/d/1XVgVNwTVRHH1cFl-tbmP9pR_yeeAeySQ-jE2b_siUDY/edit?usp=sharing
+## See Full Report at: https://docs.google.com/presentation/d/1XVgVNwTVRHH1cFl-tbmP9pR_yeeAeySQ-jE2b_siUDY/edit?usp=sharing
 
 Sneak peak of a small part of the results:
  - For The salt-finger simulations, we can look at different times to see how the layer formation takes place:
