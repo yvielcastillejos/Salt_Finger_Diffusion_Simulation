@@ -13,10 +13,10 @@ Some results:
 <img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Salt.png" width = "350" height = "250">
 
  - For the salt finger simulation above, we study the nusselt number and look at the average of the flux (also correlated to energy) and see what transpires at the different regimes.
- <img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Nu.png"  width = "150" height = "150">
+ <img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Nu.png"  width = "250" height = "250">
  
  - We can also take a look at oxygen mean vs time and see how it distributes very well as time progresses 
-<img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Oxyg_real.png" width = "180" height = "180">
+<img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Oxyg_real.png" width = "250" height = "250">
 
 # Acknowlegdement
 1. Nek5000:
