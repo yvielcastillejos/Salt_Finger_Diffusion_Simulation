@@ -8,7 +8,7 @@ The simulations were conducted by inputting the Non-dimensionalized Boussinesq E
 # Results
 ## See Full Results at: https://docs.google.com/presentation/d/1XVgVNwTVRHH1cFl-tbmP9pR_yeeAeySQ-jE2b_siUDY/edit?usp=sharing
 
-Some results:
+Sneak peak of a small part of the results:
  - For The salt-finger simulations, we can look at different times to see how the layer formation takes place:
 <img src = "https://github.com/yvielcastillejos/Salt_Finger_Diffusion_Simulation/blob/master/Salt.png" width = "550" height = "350">
 
